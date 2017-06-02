@@ -4,8 +4,6 @@ import Interface.BWindow;
 import Utilities.Logger;
 
 public class Main {
-	// TODO Put it on github
-
 	public static void main(String[] args) {
 		Logger.infoLogger("Starting program");
 		
