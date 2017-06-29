@@ -16,7 +16,6 @@ public class Main {
 				} catch( Exception e ) {
 					e.printStackTrace();
 				}
-				Logger.infoLogger("Starting interface");
 				BWindow window = new BWindow();
 			}
 		});

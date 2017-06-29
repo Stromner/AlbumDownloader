@@ -21,21 +21,25 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.SwingConstants;
 
+import Interface.Components.SiteLabel;
 import Utilities.GlobalPaths;
 import Utilities.Logger;
 
-public class SiteChoices extends JPanel{
+public class SitesPanel extends JPanel{
 	public static final int ICON_WIDTH = 16;
 	public static final int ICON_HEIGHT = 16; 
-	
 	private static final long serialVersionUID = 736660268990724071L; // Generated serialVersion
+	
 	private List<SiteLabel> siteIcons;
 	private List<JLabel> texts;
 	private List<JRadioButton> radioButtons;
 	private ButtonGroup group;
 	
-	public SiteChoices(){
+	// TODO Left allign the text
+	
+	public SitesPanel(){
 		super();
 		siteIcons = new ArrayList<SiteLabel>();
 		texts = new ArrayList<JLabel>();
@@ -52,6 +56,7 @@ public class SiteChoices extends JPanel{
 	
 	private void addSiteChoices(){
 		GridBagConstraints c = new GridBagConstraints();
+		
 		int y = 0;
 		try {
 			Scanner reader = new Scanner(new FileReader(GlobalPaths.SITEPATH));
@@ -72,9 +77,7 @@ public class SiteChoices extends JPanel{
 		}
 	}
 	
-	private void addComponentsForChoice(String dispName, GridBagConstraints c){	
-		Logger.infoLogger("Creating site alternative " + dispName + " for interface");
-		
+	private void addComponentsForChoice(String dispName, GridBagConstraints c){			
 		//
 		// Icon
 		//

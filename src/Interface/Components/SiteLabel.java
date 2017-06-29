@@ -5,7 +5,7 @@
  * @version 2017-05-31
  */
 
-package Interface;
+package Interface.Components;
 
 import java.awt.Graphics2D;
 import java.awt.Image;
