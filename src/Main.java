@@ -16,7 +16,7 @@ public class Main {
 				} catch( Exception e ) {
 					e.printStackTrace();
 				}
-				BWindow window = new BWindow();
+				new BWindow();
 			}
 		});
 	}

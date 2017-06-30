@@ -7,37 +7,35 @@
 
 package Interface;
 
-import java.awt.GridLayout;
+import java.awt.Component;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class BWindow {
+public class BWindow{
 	private JFrame frame;
-	private JPanel mPanel, sitesPanel, infoPanel, runPanel;
+	private JPanel startView, runView;
 	
 	public BWindow(){
+		// TODO set a better size for the window
 		frame = new JFrame("Album Downloader");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setResizable(false);
+		//frame.setResizable(false);
 		
-		mPanel = new JPanel();
-		mPanel.setLayout(new GridLayout(0,1));
-		addPanels();
+		startView = new StartView(this);
+		runView = new RunView();
 		
-		frame.add(mPanel);
-		frame.pack();
-		frame.setVisible(true);
+		packFrame(startView);
+	}
+
+	public void changeView(){
+		packFrame(runView);
 	}
 	
-	private void addPanels(){
-		sitesPanel = new SitesPanel();
-		mPanel.add(sitesPanel);
-		
-		infoPanel = new InfoPanel();
-		mPanel.add(infoPanel);
-		
-		runPanel = new RunPanel();
-		mPanel.add(runPanel);
+	private void packFrame(Component view){
+		frame.getContentPane().removeAll();
+		frame.add(view);
+		frame.pack();
+		frame.setVisible(true);
 	}
 }
