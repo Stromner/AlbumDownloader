@@ -22,6 +22,7 @@ public class Logger {
 	private Logger(){
 		try {
 			writer = new PrintWriter(new File(GlobalPaths.SYSTEMPATH + fileName), "UTF-8");
+			// TODO fix date, only displays the time for when the class was created
 			date = new Date();
 		} catch (FileNotFoundException | UnsupportedEncodingException e) {
 			e.printStackTrace();

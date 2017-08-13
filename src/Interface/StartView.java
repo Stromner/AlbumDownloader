@@ -31,6 +31,7 @@ public class StartView extends JPanel{
 		// TODO startButton should not be able to be pressed without
 		// a site alternative selected, album path entered and 
 		// download path selected.
+		// TODO shrink start button
 		startButton = new JButton("Start");
 		startButton.addActionListener(new ActionListener(){
 			@Override

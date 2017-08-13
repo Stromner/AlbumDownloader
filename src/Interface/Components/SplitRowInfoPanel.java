@@ -3,10 +3,10 @@ package Interface.Components;
 import java.awt.GridLayout;
 
 public class SplitRowInfoPanel extends AbstractInfoPanel{
-	private static final long serialVersionUID = -1730013103663611288L; // Generated serialVersion
+	protected static final long serialVersionUID = -1730013103663611288L; // Generated serialVersion
 
-	public SplitRowInfoPanel(String text){
-		super(text);
+	public SplitRowInfoPanel(String title){
+		super(title);
 		setLayout(new GridLayout(0, 1));
 	}
 }

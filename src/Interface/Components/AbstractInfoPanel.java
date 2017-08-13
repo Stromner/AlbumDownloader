@@ -1,5 +1,7 @@
 package Interface.Components;
 
+import java.awt.Dimension;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -18,6 +20,7 @@ public abstract class AbstractInfoPanel extends JPanel{
 		
 		header = new JLabel(title);
 		informer = new JTextField("");
+		
 		add(header);
 		add(informer);
 	}
