@@ -36,8 +36,6 @@ public class SitesPanel extends JPanel{
 	private List<JRadioButton> radioButtons;
 	private ButtonGroup group;
 	
-	// TODO Left allign the text
-	
 	public SitesPanel(){
 		super();
 		siteIcons = new ArrayList<SiteLabel>();
@@ -55,6 +53,9 @@ public class SitesPanel extends JPanel{
 	
 	private void addSiteChoices(){
 		GridBagConstraints c = new GridBagConstraints();
+		c.anchor = GridBagConstraints.WEST; // Left aligns text
+		c.ipadx = 5; // Prevents text to show up flush against the icon
+		c.weightx = 1;
 		
 		int y = 0;
 		try {
