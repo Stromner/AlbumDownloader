@@ -8,5 +8,7 @@ public class SplitRowInfoPanel extends AbstractInfoPanel{
 	public SplitRowInfoPanel(String title){
 		super(title);
 		setLayout(new GridLayout(0, 1));
+		
+		addComponents();
 	}
 }

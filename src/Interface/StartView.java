@@ -1,5 +1,6 @@
 package Interface;
 
+import java.awt.GridBagConstraints;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,11 +23,15 @@ public class StartView extends JPanel{
 	}
 	
 	private void addPanels(){
+		GridBagConstraints c = new GridBagConstraints();
+		c.fill = GridBagConstraints.BOTH;
+		c.weightx = 1;
+		
 		sitesPanel = new SitesPanel();
-		add(sitesPanel);
+		add(sitesPanel, c);
 		
 		infoPanel = new InfoPanel();
-		add(infoPanel);
+		add(infoPanel, c);
 		
 		// TODO startButton should not be able to be pressed without
 		// a site alternative selected, album path entered and 

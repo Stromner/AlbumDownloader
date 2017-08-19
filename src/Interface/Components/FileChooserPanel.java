@@ -1,5 +1,8 @@
 package Interface.Components;
 
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,12 +18,12 @@ public class FileChooserPanel extends AbstractInfoPanel{
 	
 	public FileChooserPanel(String title, String buttonText){
 		super(title);
-		
+		setLayout(new GridBagLayout());
 		button = new JButton(buttonText);
-		// TODO fix layout of this panel
-		add(button);
-		
+		button.setMargin(new Insets(0,0,0,0)); // Removes the extra space around the button
+				
 		createChooser();
+		addComponents();
 	}
 	
 	private void createChooser(){
@@ -40,5 +43,28 @@ public class FileChooserPanel extends AbstractInfoPanel{
 			}
 			
 		});
+	}
+	
+	@Override
+	protected void addComponents(){
+		GridBagConstraints c = new GridBagConstraints();
+		
+		c.gridx = 0;
+		c.gridy = 0;
+		c.anchor = GridBagConstraints.WEST;
+		add(header, c);
+	
+		c.gridx = 1;
+		c.gridy = 0;
+		c.weightx = 0;
+		c.anchor = GridBagConstraints.WEST;
+		add(button, c);
+		
+		c.gridy = 1;
+		c.gridx = 0;
+		c.weightx = 1;
+		c.gridwidth = 2;
+		c.fill = GridBagConstraints.HORIZONTAL;
+		add(informer, c);
 	}
 }

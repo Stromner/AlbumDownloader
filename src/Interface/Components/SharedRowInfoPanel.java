@@ -9,5 +9,7 @@ public class SharedRowInfoPanel extends AbstractInfoPanel{
 		super(title);
 		setLayout(new GridLayout(1, 0));
 		informer.setEditable(false);
+		
+		addComponents();
 	}
 }

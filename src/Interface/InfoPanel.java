@@ -23,6 +23,7 @@ public class InfoPanel extends JPanel{
 	private void addComponents(){
 		GridBagConstraints c = new GridBagConstraints();
 		c.fill = GridBagConstraints.BOTH;
+		c.weightx = 1;
 		
 		c.gridy = 0;
 		albumURL = new SplitRowInfoPanel("Album URL");
